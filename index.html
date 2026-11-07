@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    TeamPulse | Monthly Performance Dashboard
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+<header class="app-header">
+
+  <div class="brand">
+
+    <div class="brand-icon">
+      TP
+    </div>
+
+    <div>
+
+      <h1>
+        TeamPulse
+      </h1>
+
+      <p>
+        Monthly Performance Dashboard
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="month-display">
+
+    <span>
+      REPORTING PERIOD
+    </span>
+
+    <strong id="reportingPeriod">
+      —
+    </strong>
+
+  </div>
+
+</header>
+
+
+<main class="dashboard">
+
+
+  <!-- WELCOME -->
+
+  <section class="welcome-section">
+
+    <span class="eyebrow">
+      MONTHLY PERFORMANCE
+    </span>
+
+    <h2>
+      How did the team perform?
+    </h2>
+
+    <p>
+      A complete overview of productivity,
+      efficiency and quality for
+      <span id="welcomeMonth">—</span>.
+    </p>
+
+  </section>
+
+
+  <!-- SUMMARY -->
+
+  <section class="summary-grid">
+
+    <div class="summary-card">
+
+      <div class="card-icon">
+        📊
+      </div>
+
+      <div>
+
+        <span>
+          Total Output
+        </span>
+
+        <strong id="totalRecords">
+          —
+        </strong>
+
+        <small>
+          records completed
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+      <div class="card-icon">
+        👥
+      </div>
+
+      <div>
+
+        <span>
+          Team Members
+        </span>
+
+        <strong id="employeeCount">
+          —
+        </strong>
+
+        <small>
+          active employees
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+      <div class="card-icon">
+        ⚡
+      </div>
+
+      <div>
+
+        <span>
+          Avg. Efficiency
+        </span>
+
+        <strong id="averageEfficiency">
+          —
+        </strong>
+
+        <small>
+          team average
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+      <div class="card-icon">
+        ⭐
+      </div>
+
+      <div>
+
+        <span>
+          Avg. Quality
+        </span>
+
+        <strong id="averageQuality">
+          —
+        </strong>
+
+        <small>
+          team average
+        </small>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MONTHLY OUTPUT + HIGHLIGHTS -->
+
+  <section class="content-grid">
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="eyebrow">
+            PRODUCTIVITY
+          </span>
+
+          <h3>
+            Monthly Output
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="metric-list">
+
+        <div class="metric-row">
+
+          <span>
+            Article Addition
+          </span>
+
+          <strong id="totalArticles">
+            —
+          </strong>
+
+        </div>
+
+
+        <div class="metric-row">
+
+          <span>
+            Source Annotation
+          </span>
+
+          <strong id="totalSources">
+            —
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="total-row">
+
+        <span>
+          Total Records
+        </span>
+
+        <strong id="totalRecordsBottom">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="eyebrow">
+            RECOGNITION
+          </span>
+
+          <h3>
+            This Month's Highlights
+          </h3>
+
+        </div>
+
+      </div>
+
+
+      <div class="highlight-card">
+
+        <span>
+          Efficiency Champion
+        </span>
+
+        <strong id="efficiencyChampion">
+          —
+        </strong>
+
+        <small id="efficiencyValue">
+          —
+        </small>
+
+      </div>
+
+
+      <div class="highlight-card">
+
+        <span>
+          Quality Champion
+        </span>
+
+        <strong id="qualityChampion">
+          —
+        </strong>
+
+        <small id="qualityValue">
+          —
+        </small>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- WEEKLY -->
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          WEEK METRICS
+        </span>
+
+        <h3>
+          Productivity Trend
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="weeklyChart"
+      class="weekly-chart"
+    ></div>
+
+  </section>
+
+
+  <!-- TEAM PERFORMANCE -->
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          TEAM PERFORMANCE
+        </span>
+
+        <h3>
+          Performance Leaderboard
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>No.</th>
+            <th>Employee</th>
+            <th>Efficiency</th>
+            <th>Quality</th>
+            <th>Performance</th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody id="leaderboardBody">
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+  <!-- TEAM CONNECT -->
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          GATHERING
+        </span>
+
+        <h3>
+          Team Connect
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="teamConnectGrid"
+      class="cards-grid"
+    ></div>
+
+  </section>
+
+
+  <!-- OPERATIONAL -->
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          OPERATIONAL
+        </span>
+
+        <h3>
+          Operational Updates
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div
+      id="operationalGrid"
+      class="cards-grid"
+    ></div>
+
+  </section>
+
+
+  <!-- TEAM AWARD -->
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          RECOGNITION
+        </span>
+
+        <h3>
+          Team Award
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div id="teamAwardGrid">
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
