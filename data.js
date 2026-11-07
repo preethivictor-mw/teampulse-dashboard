@@ -147,8 +147,7 @@ const dashboardData = {
     name:
       "Madhumitha",
 
-    image:
-      "images/madhumitha.png"
+    image: "Madhu Team Topper.png"
 
   }
 
