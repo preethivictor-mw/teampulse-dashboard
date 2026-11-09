@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    TeamPulse | Monthly Output
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<header class="app-header">
+
+  <div class="brand">
+
+    <div class="brand-icon">
+      TP
+    </div>
+
+    <div>
+
+      <h1>
+        TeamPulse
+      </h1>
+
+      <p>
+        Monthly Output
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <a
+    href="index.html"
+    class="back-button"
+  >
+    ← Dashboard
+  </a>
+
+</header>
+
+
+<main class="dashboard">
+
+
+  <section class="welcome-section">
+
+    <span class="eyebrow">
+      PRODUCTIVITY
+    </span>
+
+    <h2>
+      Monthly Output
+    </h2>
+
+    <p>
+      Task output summary for
+      <span id="reportMonth">—</span>.
+    </p>
+
+  </section>
+
+
+  <section class="content-grid">
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="eyebrow">
+            ARTICLE ADDITION
+          </span>
+
+          <h3>
+            Article Addition Output
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="total-row">
+
+        <span>
+          Total Article Addition
+        </span>
+
+        <strong id="articleTotal">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="panel">
+
+      <div class="panel-header">
+
+        <div>
+
+          <span class="eyebrow">
+            SOURCE ANNOTATION
+          </span>
+
+          <h3>
+            Source Annotation Output
+          </h3>
+
+        </div>
+
+      </div>
+
+      <div class="total-row">
+
+        <span>
+          Total Source Annotation
+        </span>
+
+        <strong id="sourceTotal">
+          —
+        </strong>
+
+      </div>
+
+    </div>
+
+
+  </section>
+
+
+  <section class="panel">
+
+    <div class="panel-header">
+
+      <div>
+
+        <span class="eyebrow">
+          MONTHLY TOTAL
+        </span>
+
+        <h3>
+          Overall Output
+        </h3>
+
+      </div>
+
+    </div>
+
+
+    <div class="total-row">
+
+      <span>
+        Total Records
+      </span>
+
+      <strong id="overallTotal">
+        —
+      </strong>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<script src="data.js"></script>
+<script src="productivity.js"></script>
+
+
+</body>
+
+</html>
