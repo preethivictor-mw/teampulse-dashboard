@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    TeamPulse | Weekly Performance
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+</head>
+
+
+<body>
+
+
+<header class="app-header">
+
+  <div class="brand">
+
+    <div class="brand-icon">
+      TP
+    </div>
+
+    <div>
+
+      <h1>
+        TeamPulse
+      </h1>
+
+      <p>
+        Weekly Performance
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <a
+    href="index.html"
+    class="back-button"
+  >
+    ← Dashboard
+  </a>
+
+</header>
+
+
+<main class="dashboard">
+
+
+  <section class="welcome-section">
+
+    <span class="eyebrow">
+      WEEK METRICS
+    </span>
+
+    <h2>
+      Productivity Trend
+    </h2>
+
+    <p>
+      Weekly task output for
+      <span id="reportMonth">—</span>.
+    </p>
+
+  </section>
+
+
+  <section class="panel">
+
+    <div
+      id="weeklyChart"
+      class="weekly-chart"
+    ></div>
+
+  </section>
+
+
+  <section class="panel">
+
+    <div class="table-container">
+
+      <table>
+
+        <thead>
+
+          <tr>
+
+            <th>Week</th>
+
+            <th>
+              Article Addition
+            </th>
+
+            <th>
+              Source Annotation
+            </th>
+
+            <th>Total</th>
+
+          </tr>
+
+        </thead>
+
+
+        <tbody id="weeklyTableBody">
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </section>
+
+
+</main>
+
+
+<script src="data.js"></script>
+<script src="weekly.js"></script>
+
+
+</body>
+
+</html>
