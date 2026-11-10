@@ -114,7 +114,7 @@ const dashboardData = {
       member: "Yaamini",
       topic: "Influencer Marketing",
       description:
-        "Shared valuable points about Influencer Marketing inferred from Macedamy course"
+        "Shared valuable points about Influencer Marketing inferred from the Macedamy course"
     }
 
   ],
@@ -126,7 +126,7 @@ const dashboardData = {
       action: "Project",
       area: "Meltwater Trend Analysis",
       description:
-        "Shoban, Ram and Rajkumar are doing an extraordinary job in Trend Analysis. The team is working on Curated News and Facebook with 81.1% as overall completion rate."
+        "Shoban, Ram and Rajkumar are doing an extraordinary job in Trend Analysis. \nThe team is working on trends based on surge data across the channel curated news and Facebook.\nAfter filteration of sub categories team performed a relevancy analysis and count changes across all the channels."
     },
 
     {
