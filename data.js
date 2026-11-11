@@ -139,7 +139,9 @@ const dashboardData = {
   ],
 
 
-  teamAward: {
+  teamAward: [
+
+  {
 
     title:
       "Team Topper",
@@ -147,8 +149,24 @@ const dashboardData = {
     name:
       "Madhumitha",
 
-    image: "Madhu Team Topper.png"
+    image:
+      "Madhu Team Topper.png"
+
+  },
+
+  {
+
+    title:
+      "Closest Person",
+
+    name:
+      "Ashokan",
+
+    image:
+      "Ashokan Closest Person.png"
 
   }
+
+]
 
 };
