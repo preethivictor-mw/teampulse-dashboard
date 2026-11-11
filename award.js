@@ -20,7 +20,7 @@ function renderAwardPage(
   );
 
 
-  renderAward(
+  renderAwards(
     data.teamAward,
     data.reportMonth
   );
@@ -28,8 +28,8 @@ function renderAwardPage(
 }
 
 
-function renderAward(
-  award,
+function renderAwards(
+  awards,
   month
 ) {
 
@@ -39,54 +39,203 @@ function renderAward(
     );
 
 
-  if (!award) {
-
-    container.innerHTML =
-      "<p>No award available.</p>";
+  if (!container) {
 
     return;
 
   }
 
 
-  container.innerHTML = `
+  container.innerHTML =
+    "";
 
-    <div class="award-card">
 
-      <img
-        class="award-photo"
-        src="${award.image}"
-        alt="${award.name}"
-      >
+  // Supports both the old single-object format
+  // and the new array format.
+  const awardList =
+    Array.isArray(awards)
+      ? awards
+      : awards
+        ? [awards]
+        : [];
 
-      <div class="award-details">
 
-        <span class="award-title">
-          ${award.title}
-        </span>
+  if (!awardList.length) {
 
-        <h3>
-          ${award.name}
-        </h3>
+    container.innerHTML =
+      "<p>No awards available.</p>";
 
-        <p>
+    return;
 
-          Congratulations on being
-          recognised as
+  }
 
-          <strong>
-            ${award.title}
-          </strong>
 
-          for ${month}.
+  awardList.forEach(
+    function(award) {
 
-        </p>
+      const card =
+        document.createElement(
+          "div"
+        );
 
-      </div>
 
-    </div>
+      card.className =
+        "award-card";
 
-  `;
+
+      const imageHtml =
+        award.image
+
+          ? `
+
+            <img
+              class="award-photo"
+              src="${escapeHtml(
+                award.image
+              )}"
+              alt="${escapeHtml(
+                award.name
+              )}"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+
+            <div
+              class="award-placeholder"
+              style="display:none;"
+            >
+              ${getInitial(
+                award.name
+              )}
+            </div>
+
+          `
+
+          : `
+
+            <div
+              class="award-placeholder"
+            >
+              ${getInitial(
+                award.name
+              )}
+            </div>
+
+          `;
+
+
+      card.innerHTML = `
+
+        ${imageHtml}
+
+        <div class="award-details">
+
+          <span class="award-title">
+
+            ${escapeHtml(
+              award.title
+            )}
+
+          </span>
+
+
+          <h3>
+
+            ${escapeHtml(
+              award.name
+            )}
+
+          </h3>
+
+
+          <p>
+
+            Congratulations on being
+            recognised as
+
+            <strong>
+
+              ${escapeHtml(
+                award.title
+              )}
+
+            </strong>
+
+            for
+
+            ${escapeHtml(
+              month
+            )}.
+
+          </p>
+
+        </div>
+
+      `;
+
+
+      container.appendChild(
+        card
+      );
+
+    }
+  );
+
+}
+
+
+function getInitial(
+  name
+) {
+
+  const text =
+    String(
+      name || ""
+    ).trim();
+
+
+  return text
+    ? escapeHtml(
+        text.charAt(0).toUpperCase()
+      )
+    : "A";
+
+}
+
+
+function escapeHtml(
+  value
+) {
+
+  return String(
+    value == null
+      ? ""
+      : value
+  )
+
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+
+    .replace(
+      /</g,
+      "&lt;"
+    )
+
+    .replace(
+      />/g,
+      "&gt;"
+    )
+
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+
+    .replace(
+      /'/g,
+      "&#39;"
+    );
 
 }
 
@@ -100,6 +249,7 @@ function setText(
     document.getElementById(
       id
     );
+
 
   if (element) {
 
