@@ -2133,3 +2133,86 @@ html {
 
 }
 
+/* ======================================
+   MULTIPLE TEAM AWARDS
+====================================== */
+
+.team-award-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(
+      2,
+      minmax(
+        0,
+        1fr
+      )
+    );
+
+  gap:
+    20px;
+
+}
+
+
+.team-award-grid .award-card {
+
+  align-items:
+    center;
+
+  min-width:
+    0;
+
+}
+
+
+.team-award-grid .award-photo {
+
+  width:
+    110px;
+
+  height:
+    110px;
+
+  flex:
+    0 0 110px;
+
+}
+
+
+.team-award-grid .award-placeholder {
+
+  width:
+    110px;
+
+  height:
+    110px;
+
+  flex:
+    0 0 110px;
+
+}
+
+
+.team-award-grid .award-details h3 {
+
+  font-size:
+    22px;
+
+}
+
+
+@media (
+  max-width: 850px
+) {
+
+  .team-award-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+}
