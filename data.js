@@ -126,7 +126,7 @@ const dashboardData = {
       action: "Project",
       area: "Meltwater Trend Analysis",
       description:
-        "Shoban, Ram and Rajkumar are doing an extraordinary job in Trend Analysis. \nThe team is working on trends based on surge data across the channel curated news and Facebook.\nAfter filteration of sub categories team performed a relevancy analysis and count changes across all the channels."
+        "1. Shoban, Ram and Rajkumar are doing an extraordinary job in Trend Analysis. \n2. The team is working on trends based on surge data across the channel curated news and Facebook.\n3. After filteration of sub categories team performed a relevancy analysis and count changes across all the channels."
     },
 
     {
